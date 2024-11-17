@@ -45,13 +45,13 @@ export interface I18nCreateScreenLabelsInterface {
 export const CreateScreenLabels: I18nCreateScreenLabelsInterface = {
   [createRoomHeading]: ({eventMode, audioRoom}) => {
     if (audioRoom) {
-      if (eventMode) {
+      if (!eventMode) {
         return 'Create a Audio Livecast';
       } else {
         return 'Create a Voice Chat';
       }
     } else {
-      if (eventMode) {
+      if (!eventMode) {
         return 'Create a Livestream';
       } else {
         return 'Create a Room';
@@ -60,13 +60,13 @@ export const CreateScreenLabels: I18nCreateScreenLabelsInterface = {
   },
   [createRoomInputLabel]: ({eventMode, audioRoom}) => {
     if (audioRoom) {
-      if (eventMode) {
+      if (!eventMode) {
         return 'Audio Livecast Name';
       } else {
         return 'Voice Chat Name';
       }
     } else {
-      if (eventMode) {
+      if (!eventMode) {
         return 'Stream Name';
       } else {
         return 'Room Name';
@@ -82,13 +82,13 @@ export const CreateScreenLabels: I18nCreateScreenLabelsInterface = {
     'Attendees can dial a number and join via PSTN',
   [createRoomBtnText]: ({eventMode, audioRoom}) => {
     if (audioRoom) {
-      if (eventMode) {
+      if (!eventMode) {
         return 'CREATE A AUDIO LIVECAST';
       } else {
         return 'CREATE A VOICE CHAT';
       }
     } else {
-      if (eventMode) {
+      if (!eventMode) {
         return 'CREATE A STREAM';
       } else {
         return 'CREATE A ROOM';

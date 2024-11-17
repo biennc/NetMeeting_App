@@ -29,20 +29,21 @@ export const JoinScreenLabels: I18nJoinScreenLabelsInterface = {
     }
   },
   [joinRoomInputLabel]: ({eventMode}) => {
-    if (eventMode) {
+    if (!eventMode) {
       return 'Stream ID';
     } else {
       return 'Room ID';
     }
   },
   [joinRoomInputPlaceHolderText]: ({eventMode}) => {
-    if (eventMode) {
+    if (!eventMode) {
       return 'Enter Stream ID';
     } else {
       return 'Enter Room ID';
     }
   },
-  [joinRoomBtnText]: ({eventMode}) => (eventMode ? 'Join Stream' : 'Join Room'),
+  [joinRoomBtnText]: ({eventMode}) =>
+    !eventMode ? 'Join Stream' : 'Join Room',
   [joinRoomCreateBtnText]: ({eventMode}) =>
     eventMode ? 'Create a Stream' : 'Create a Room',
   [joinRoomErrorToastHeading]: ({eventMode}) =>
